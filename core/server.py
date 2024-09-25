@@ -15,7 +15,7 @@ app.register_blueprint(principal_assignments_resources, url_prefix='/principal')
 
 @app.route('/')
 def ready():
-    dir_path="core/"
+    dir_path="./"
     file_list=listdir(dir_path)
     if("data.json" in file_list):
         db.drop_all()
